@@ -129,12 +129,25 @@ defined('BASEPATH') OR exit('');
                         </li>
                         <?php endif; ?>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-left">
                         <li class="dropdown">
                             <a>
-                                Total Earned Today: <b>&#8358;<span id="totalEarnedToday"></span></b>
+                                <b>
+                                    <?php
+                                        $host = $_SERVER['HTTP_HOST'];//e.g practa.ng || www.practa.ng || localhost
+                                        if ($host == 'ijc-distributor.pesoros.com') {
+                                            echo 'Distributor';
+                                        } elseif ($host == 'ijc-pos.pesoros.com') {
+                                            echo 'POS';
+                                        } else {
+                                            echo 'Distributor | POS';
+                                        }
+                                    ?>
+                                </b>
                             </a>
                         </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-user navbarIcons"></i>

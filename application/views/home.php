@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="col-sm-8 col-sm-offset-2 text">
                             <div style="font-size:100px">
-                                <h1>
+                                <h1 style="color: white;">
                                 <?php
                                     $host = $_SERVER['HTTP_HOST'];//e.g practa.ng || www.practa.ng || localhost
                                     if ($host == 'ijc-distributor.pesoros.com') {
