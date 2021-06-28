@@ -40,6 +40,13 @@ defined('BASEPATH') OR exit('');
         <!-- custom CSS -->
         <link rel="stylesheet" href="<?= base_url() ?>public/css/main.css">
 
+        <style>
+            .logokiri {
+                background-color: black;
+                height: 245%;
+            }
+        </style>
+
         <!-- custom JS -->
         <script src="<?= base_url() ?>public/js/main.js"></script>
     </head>
@@ -56,7 +63,7 @@ defined('BASEPATH') OR exit('');
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?=base_url()?>" style="margin-top:-15px">
-                        <img src="<?=base_url()?>public/images/logo_black.png" alt="logo" class="img-responsive" width="73px">
+                        <img src="<?=base_url()?>public/images/logo_black.png" alt="logo" class="img-responsive logokiri" width="73px">
                     </a>
                 </div>
 
