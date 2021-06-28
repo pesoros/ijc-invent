@@ -71,11 +71,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 $host = $_SERVER['HTTP_HOST'];//e.g practa.ng || www.practa.ng || localhost
-if ($host == 'www.ijc-distributor.pesoros.com') {
+if ($host == 'ijc-distributor.pesoros.com') {
 	$dbname = 'u1442932_inventdist';
 	$dbuser = 'u1442932_pesorosdev';
 	$dbpass = 'westlondon05';
-} elseif ($host == 'www.ijc-pos.pesoros.com') {
+} elseif ($host == 'ijc-pos.pesoros.com') {
 	$dbname = 'u1442932_inventpos';
 	$dbuser = 'u1442932_pesorosdev';
 	$dbpass = 'westlondon05';
