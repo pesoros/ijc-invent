@@ -37,7 +37,7 @@ else if(stristr($host, "localhost") !== FALSE || (stristr($host, "192.168.") !==
 else{
     $allowed = ['ijc-distributor.pesoros.com','ijc-pos.pesoros.com'];//input all allowed urls here e.g. amirsanni.com, www.practa.ng, smartagapp.com
 
-    $config['base_url'] = in_array($host, $allowed) ? $protocol.$host."/invent/" : "http://".$_SERVER['HTTP_HOST']."/";
+    $config['base_url'] = in_array($host, $allowed) ? $protocol.$host : "http://".$_SERVER['HTTP_HOST']."/";
 }
 
 /*
