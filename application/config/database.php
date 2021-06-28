@@ -75,7 +75,7 @@ if ($host == 'www.ijc-distributor.pesoros.com') {
 	$dbname = 'u1442932_inventdist';
 	$dbuser = 'u1442932_pesorosdev';
 	$dbpass = 'westlondon05';
-} elseif ($host == 'www.ij-cpos.pesoros.com') {
+} elseif ($host == 'www.ijc-pos.pesoros.com') {
 	$dbname = 'u1442932_inventpos';
 	$dbuser = 'u1442932_pesorosdev';
 	$dbpass = 'westlondon05';
