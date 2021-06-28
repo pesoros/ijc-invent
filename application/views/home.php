@@ -61,6 +61,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <h1><img src="<?=base_url()?>public/images/logo_white.png" alt="1410-logo" height="150px"></h1>
                             </div>
                         </div>
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <div style="font-size:100px">
+                                <h1>
+                                <?php
+                                    $host = $_SERVER['HTTP_HOST'];//e.g practa.ng || www.practa.ng || localhost
+                                    if ($host == 'ijc-distributor.pesoros.com') {
+                                        echo 'Distributor';
+                                    } elseif ($host == 'ijc-pos.pesoros.com') {
+                                        echo 'POS';
+                                    } else {
+                                        echo 'Distributor | POS';
+                                    }
+                                ?>
+                                </h1>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
