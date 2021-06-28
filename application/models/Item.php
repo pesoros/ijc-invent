@@ -51,8 +51,8 @@ class Item extends CI_Model{
      * @param type $itemCode
      * @return boolean
      */
-    public function add($itemName, $itemQuantity, $itemPrice, $itemDescription, $itemCode){
-        $data = ['name'=>$itemName, 'quantity'=>$itemQuantity, 'unitPrice'=>$itemPrice, 'description'=>$itemDescription, 'code'=>$itemCode];
+    public function add($itemName, $itemQuantity, $itemPrice, $itemDescription, $itemCode, $itemCategory){
+        $data = ['name'=>$itemName, 'quantity'=>$itemQuantity, 'unitPrice'=>$itemPrice, 'description'=>$itemDescription, 'code'=>$itemCode, 'category'=>$itemCategory];
                 
         //set the datetime based on the db driver in use
         $this->db->platform() == "sqlite3" 

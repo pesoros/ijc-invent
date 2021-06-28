@@ -94,7 +94,7 @@ class Items extends CI_Controller{
         $this->form_validation->set_rules('itemName', 'Item name', ['required', 'trim', 'max_length[80]', 'is_unique[items.name]'],
                 ['required'=>"required"]);
         $this->form_validation->set_rules('itemQuantity', 'Item quantity', ['required', 'trim', 'numeric'], ['required'=>"required"]);
-        $this->form_validation->set_rules('itemPrice', 'Item Price', ['required', 'trim', 'numeric'], ['required'=>"required"]);
+        // $this->form_validation->set_rules('itemPrice', 'Item Price', ['required', 'trim', 'numeric'], ['required'=>"required"]);
         $this->form_validation->set_rules('itemCode', 'Item Code', ['required', 'trim', 'max_length[20]', 'is_unique[items.code]'], 
                 ['required'=>"required", 'is_unique'=>"There is already an item with this code"]);
         
@@ -105,16 +105,15 @@ class Items extends CI_Controller{
              * insert info into db
              * function header: add($itemName, $itemQuantity, $itemPrice, $itemDescription, $itemCode)
              */
-            $insertedId = $this->item->add(set_value('itemName'), set_value('itemQuantity'), set_value('itemPrice'), 
-                    set_value('itemDescription'), set_value('itemCode'));
+            $insertedId = $this->item->add(set_value('itemName'), set_value('itemQuantity'), 0, 
+                    set_value('itemDescription'), set_value('itemCode'), set_value('itemCategory'));
             
             $itemName = set_value('itemName');
             $itemQty = set_value('itemQuantity');
-            $itemPrice = "&#8358;".number_format(set_value('itemPrice'), 2);
             
             //insert into eventlog
             //function header: addevent($event, $eventRowId, $eventDesc, $eventTable, $staffId)
-            $desc = "Addition of {$itemQty} quantities of a new item '{$itemName}' with a unit price of {$itemPrice} to stock";
+            $desc = "Addition of {$itemQty} quantities of a new item '{$itemName}' to stock";
             
             $insertedId ? $this->genmod->addevent("Creation of new item", $insertedId, $desc, "items", $this->session->admin_id) : "";
             

@@ -98,15 +98,17 @@ $(document).ready(function(){
         
         var itemName = $("#itemName").val();
         var itemQuantity = $("#itemQuantity").val();
-        var itemPrice = $("#itemPrice").val().replace(",", "");
+        // var itemPrice = $("#itemPrice").val().replace(",", "");
         var itemCode = $("#itemCode").val();
         var itemDescription = $("#itemDescription").val();
+        var itemCategory = $("#itemCategory").val();
         
-        if(!itemName || !itemQuantity || !itemPrice || !itemCode){
+        if(!itemName || !itemQuantity || !itemCategory || !itemCode){
             !itemName ? $("#itemNameErr").text("required") : "";
             !itemQuantity ? $("#itemQuantityErr").text("required") : "";
-            !itemPrice ? $("#itemPriceErr").text("required") : "";
+            // !itemPrice ? $("#itemPriceErr").text("required") : "";
             !itemCode ? $("#itemCodeErr").text("required") : "";
+            !itemCategory ? $("#itemCategoryErr").text("required") : "";
             
             $("#addCustErrMsg").text("One or more required fields are empty");
             
@@ -118,7 +120,7 @@ $(document).ready(function(){
         $.ajax({
             type: "post",
             url: appRoot+"items/add",
-            data:{itemName:itemName, itemQuantity:itemQuantity, itemPrice:itemPrice, itemDescription:itemDescription, itemCode:itemCode},
+            data:{itemName:itemName, itemQuantity:itemQuantity, itemPrice:0, itemDescription:itemDescription, itemCode:itemCode, itemCategory:itemCategory},
             
             success: function(returnedData){
                 if(returnedData.status === 1){

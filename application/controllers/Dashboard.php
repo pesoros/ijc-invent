@@ -35,7 +35,7 @@ class Dashboard extends CI_Controller{
         $data['highestEarners'] = $this->analytic->highestEarners();
         $data['lowestEarners'] = $this->analytic->lowestEarners();
         $data['totalItems'] = $this->db->count_all('items');
-        $data['totalSalesToday'] = (int)$this->analytic->totalSalesToday();
+        // $data['totalSalesToday'] = (int)$this->analytic->totalSalesToday();
         $data['totalTransactions'] = $this->transaction->totalTransactions();
         $data['dailyTransactions'] = $this->analytic->getDailyTrans();
         $data['transByDays'] = $this->analytic->getTransByDays();
