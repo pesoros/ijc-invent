@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('');
 /**
  * Description of Report
  *
- * @author Amir <amirsanni@gmail.com>
+ * @author Pesoros <pesorosdev@gmail.com>
  * @date 26-Jun-2016
  */
 class Report extends CI_Model{

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Description of Home
  *
- * @author Amir <amirsanni@gmail.com>
+ * @author Pesoros <pesorosdev@gmail.com>
  * @date 20th Jan, 2016
  */
 class Home extends CI_Controller {

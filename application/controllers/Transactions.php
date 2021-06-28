@@ -4,7 +4,7 @@ require_once 'functions.php';
 /**
  * Description of Transactions
  *
- * @author Amir <amirsanni@gmail.com>
+ * @author Pesoros <pesorosdev@gmail.com>
  * @date 31st Dec, 2015
  */
 class Transactions extends CI_Controller{

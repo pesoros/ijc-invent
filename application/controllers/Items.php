@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('');
 /**
  * Description of Items
  *
- * @author Amir <amirsanni@gmail.com>
+ * @author Pesoros <pesorosdev@gmail.com>
  * @date 31st Dec, 2015
  */
 class Items extends CI_Controller{

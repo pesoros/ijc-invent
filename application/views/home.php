@@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     
                     <div class="row">
                         <div class="col-sm-12 text-center" style="color:white">
-                            Designed and Developed by <a href="http://www.amirsanni.com/" target='_blank' class="text-primary">Amir Sanni</a> (2016)
+                            Designed and Developed by <a href="http://www.pesoros.com/" target='_blank' class="text-primary">Pesoros</a> (2021)
                         </div>
                     </div>
                 </div>

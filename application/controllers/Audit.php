@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('');
 /**
  * Description of Home
  *
- * @author Amir <amirsanni@gmail.com>
+ * @author Pesoros <pesorosdev@gmail.com>
  * @date 20th Rab. Awwal, 1437AH
  * @date 1st Jan, 2016
  */

@@ -238,7 +238,7 @@ defined('BASEPATH') OR exit('');
         <footer class="container-fluid text-center hidden-print">
             <p>
                 <i class="fa fa-copyright"></i>
-                Copyright <a href="http://www.amirsanni.com">Amir Sanni</a> (2016 - <?=date('Y')?>)
+                Copyright <a href="http://www.pesoros.com">Pesoros</a> (<?=date('Y')?>)
             </p>
         </footer>
 
