@@ -1,6 +1,6 @@
 'use strict';
 
-var appRoot = setAppRoot("", "");
+var appRoot = setAppRoot("invent", "invent");
 var spinnerClass = 'fa fa-spinner faa-spin animated';
 
 $(document).ready(function(){
