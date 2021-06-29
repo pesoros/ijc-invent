@@ -94,7 +94,7 @@ class Items extends CI_Controller{
         $this->form_validation->set_rules('itemName', 'Item name', ['required', 'trim', 'max_length[80]', 'is_unique[items.name]'],
                 ['required'=>"required"]);
         $this->form_validation->set_rules('itemQuantity', 'Item quantity', ['required', 'trim', 'numeric'], ['required'=>"required"]);
-        // $this->form_validation->set_rules('itemPrice', 'Item Price', ['required', 'trim', 'numeric'], ['required'=>"required"]);
+        $this->form_validation->set_rules('itemPrice', 'Item Price', ['required', 'trim', 'numeric'], ['required'=>"required"]);
         $this->form_validation->set_rules('itemCode', 'Item Code', ['required', 'trim', 'max_length[20]', 'is_unique[items.code]'], 
                 ['required'=>"required", 'is_unique'=>"There is already an item with this code"]);
         
@@ -105,7 +105,7 @@ class Items extends CI_Controller{
              * insert info into db
              * function header: add($itemName, $itemQuantity, $itemPrice, $itemDescription, $itemCode)
              */
-            $insertedId = $this->item->add(set_value('itemName'), set_value('itemQuantity'), 0, 
+            $insertedId = $this->item->add(set_value('itemName'), set_value('itemQuantity'), set_value('itemPrice'), 
                     set_value('itemDescription'), set_value('itemCode'), set_value('itemCategory'));
             
             $itemName = set_value('itemName');

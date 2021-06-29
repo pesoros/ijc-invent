@@ -97,6 +97,15 @@ defined('BASEPATH') OR exit('');
 
                         <div class="row">
                             <div class="col-sm-12 form-group-sm">
+                                <label for="unitPrice">(Rp.)Unit Price</label>
+                                <input type="text" id="itemPrice" name="itemPrice" placeholder="(Rp.)Unit Price" class="form-control"
+                                    onchange="checkField(this.value, 'itemPriceErr')">
+                                <span class="help-block errMsg" id="itemPriceErr"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12 form-group-sm">
                                 <label for="unitPrice">Category</label>
                                 <input type="text" id="itemCategory" name="itemCategory" placeholder="Category" class="form-control"
                                     onchange="checkField(this.value, 'itemCategoryErr')">
