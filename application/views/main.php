@@ -220,12 +220,12 @@ defined('BASEPATH') OR exit('');
                             </a>
                         </li>--->
                         
-                        <li class="<?= $pageTitle == 'Database' ? 'active' : '' ?>">
+                        <!-- <li class="<?= $pageTitle == 'Database' ? 'active' : '' ?>">
                             <a href="<?= site_url('dbmanagement') ?>">
                                 <i class="fa fa-database"></i>
                                 Database Management
                             </a>
-                        </li>
+                        </li> -->
                         
                         <li class="<?= $pageTitle == 'Administrators' ? 'active' : '' ?>">
                             <a href="<?= site_url('administrators') ?>">
