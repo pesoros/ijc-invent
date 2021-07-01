@@ -10,7 +10,7 @@ $(document).ready(function(){
     totalEarnedToday();
     
     
-    //to view transaction receipt
+    //to view transaction receipt 
     $("#transListTable").on('click', '.vtr', function(){
         vtr_(this);
     });
