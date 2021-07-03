@@ -96,15 +96,15 @@ class Genmod extends CI_Model{
     public function addevent($event, $eventRowIdOrRef, $eventDesc, $eventTable, $staffId){
         $data = ['event'=>$event, 'eventRowIdOrRef'=>$eventRowIdOrRef, 'eventDesc'=>$eventDesc, 'eventTable'=>$eventTable, 'staffInCharge'=>$staffId];
         
-        $this->db->insert('eventlog', $data);
+        // $this->db->insert('eventlog', $data);
         
-        if($this->db->affected_rows() > 0){
+        // if($this->db->affected_rows() > 0){
+        //     return TRUE;
+        // }
+        
+        // else{
             return TRUE;
-        }
-        
-        else{
-            return FALSE;
-        }
+        // }
     }
     
     /*
