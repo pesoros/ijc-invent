@@ -15,7 +15,7 @@ class Misc extends CI_Controller{
     
     
     public function totalEarnedToday(){
-        $this->genlib->checkLogin();
+        // $this->genlib->checkLogin();
         
         $this->genlib->ajaxOnly();
         
@@ -52,7 +52,7 @@ class Misc extends CI_Controller{
     
     
     public function dbmanagement(){
-        $this->genlib->checkLogin();
+        // $this->genlib->checkLogin();
         
         $this->genlib->superOnly();
         
@@ -64,7 +64,7 @@ class Misc extends CI_Controller{
     
     
     public function dldb(){
-        $this->genlib->checkLogin();
+        // $this->genlib->checkLogin();
         
         $this->genlib->superOnly();
         
@@ -80,7 +80,7 @@ class Misc extends CI_Controller{
      * 
      */
     public function importdb(){
-        $this->genlib->checkLogin();
+        // $this->genlib->checkLogin();
         
         $this->genlib->superOnly();
         
