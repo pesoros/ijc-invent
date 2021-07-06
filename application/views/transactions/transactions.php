@@ -86,7 +86,6 @@ if(isset($items) && !empty($items)){
                                         <div class="col-sm-3 form-group-sm">
                                             <label for="modeOfPayment">Mode of Payment</label>
                                             <select class="form-control checkField" id="modeOfPayment">
-                                                <option value="">---</option>
                                                 <option value="Cash">Cash</option>
                                                 <option value="POS">POS</option>
                                                 <option value="Cash and POS">Cash and POS</option>
