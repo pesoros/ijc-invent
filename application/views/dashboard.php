@@ -118,63 +118,8 @@ defined('BASEPATH') OR exit('');
             <?php endif; ?>
         </div>
     </div>
-    
-    <div class="col-sm-3">
-        <div class="panel panel-hash">
-            <div class="panel-heading"><i class="fa fa-money"></i> HIGHEST EARNING</div>
-            <?php if($highestEarners): ?>
-            <table class="table table-striped table-responsive table-hover">
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Total Earned</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php foreach($highestEarners as $get):?>
-                    <tr>
-                        <td><?=$get->name?></td>
-                        <td>Rp.<?=number_format($get->totEarned, 2)?></td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
-            </table>
-            <?php else: ?>
-            No Transactions
-            <?php endif; ?> 
-        </div>
-    </div>
-    
-    <div class="col-sm-3">
-        <div class="panel panel-hash">
-            <div class="panel-heading"><i class="fa fa-money"></i> LOWEST EARNING</div>
-            <?php if($lowestEarners): ?>
-            <table class="table table-striped table-responsive table-hover">
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Total Earned</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php foreach($lowestEarners as $get):?>
-                    <tr>
-                        <td><?=$get->name?></td>
-                        <td>Rp.<?=number_format($get->totEarned, 2)?></td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
-            </table>
-            <?php else: ?>
-            No Transactions
-            <?php endif; ?> 
-        </div>
-    </div>
-</div>
-<!-- END OF ROW OF SUMMARY -->
 
-<div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-3">
         <div class="panel panel-hash">
             <div class="panel-heading">Daily Transactions</div>
             <div class="panel-body scroll panel-height">
@@ -184,8 +129,6 @@ defined('BASEPATH') OR exit('');
                         <tr>
                             <th>Date</th>
                             <th>Qty Sold</th>
-                            <th>Tot. Trans</th>
-                            <th>Tot. Earned</th>
                         </tr>
                     </thead>
 
@@ -201,8 +144,6 @@ defined('BASEPATH') OR exit('');
                                 ?>
                             </td>
                             <td><?=$get->qty_sold?></td>
-                            <td><?=$get->tot_trans?></td>
-                            <td>Rp.<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>
@@ -215,7 +156,7 @@ defined('BASEPATH') OR exit('');
     </div>
     
     
-    <div class="col-sm-6">
+    <div class="col-sm-3">
         <div class="panel panel-hash">
             <div class="panel-heading">Transactions by Days</div>
             <div class="panel-body scroll panel-height">
@@ -225,8 +166,6 @@ defined('BASEPATH') OR exit('');
                         <tr>
                             <th>Day</th>
                             <th>Qty Sold</th>
-                            <th>Tot. Trans</th>
-                            <th>Tot. Earned</th>
                         </tr>
                     </thead>
 
@@ -235,8 +174,6 @@ defined('BASEPATH') OR exit('');
                         <tr>
                             <td><?=$get->day?>s</td>
                             <td><?=$get->qty_sold?></td>
-                            <td><?=$get->tot_trans?></td>
-                            <td>Rp.<?=number_format($get->tot_earned, 2)?></td>
                         </tr>
                         <?php endforeach;?>
                     </tbody>
@@ -251,7 +188,7 @@ defined('BASEPATH') OR exit('');
 
 
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-sm-6">
         <div class="panel panel-hash">
             <div class="panel-heading">Transactions by Months</div>
@@ -318,7 +255,7 @@ defined('BASEPATH') OR exit('');
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <script src="<?=base_url('public/js/chart.js'); ?>"></script>
 <script src="<?=base_url('public/js/dashboard.js')?>"></script>
