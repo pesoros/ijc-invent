@@ -33,11 +33,9 @@ defined('BASEPATH') OR exit('');
                         <select id="itemsListSortBy" class="form-control">
                             <option value="name-ASC">Item Name (A-Z)</option>
                             <option value="code-ASC">Item Code (Ascending)</option>
-                            <option value="unitPrice-DESC">Unit Price (Highest first)</option>
                             <option value="quantity-DESC">Quantity (Highest first)</option>
                             <option value="name-DESC">Item Name (Z-A)</option>
                             <option value="code-DESC">Item Code (Descending)</option>
-                            <option value="unitPrice-ASC">Unit Price (lowest first)</option>
                             <option value="quantity-ASC">Quantity (lowest first)</option>
                         </select>
                     </div>
@@ -97,16 +95,7 @@ defined('BASEPATH') OR exit('');
 
                         <div class="row">
                             <div class="col-sm-12 form-group-sm">
-                                <label for="unitPrice">(Rp.)Unit Price</label>
-                                <input type="text" id="itemPrice" name="itemPrice" placeholder="(Rp.)Unit Price" class="form-control"
-                                    onchange="checkField(this.value, 'itemPriceErr')">
-                                <span class="help-block errMsg" id="itemPriceErr"></span>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-12 form-group-sm">
-                                <label for="unitPrice">Category</label>
+                                <label for="category">Category</label>
                                 <input type="text" id="itemCategory" name="itemCategory" placeholder="Category" class="form-control"
                                     onchange="checkField(this.value, 'itemCategoryErr')">
                                 <span class="help-block errMsg" id="itemCategoryErr"></span>
@@ -240,12 +229,6 @@ defined('BASEPATH') OR exit('');
                             <label for="itemCode">Item Code</label>
                             <input type="text" id="itemCodeEdit" class="form-control">
                             <span class="help-block errMsg" id="itemCodeEditErr"></span>
-                        </div>
-                        
-                        <div class="col-sm-4 form-group-sm">
-                            <label for="unitPrice">Unit Price</label>
-                            <input type="text" id="itemPriceEdit" name="itemPrice" placeholder="Unit Price" class="form-control checkField">
-                            <span class="help-block errMsg" id="itemPriceEditErr"></span>
                         </div>
                     </div>
                     

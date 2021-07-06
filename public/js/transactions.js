@@ -211,7 +211,7 @@ $(document).ready(function(){
              * display "cash" an "pos" fields
              */
             $("#amountTenderedLabel").html("Total");
-            $("#amountTendered").val('').prop('disabled', true);
+            $("#amountTendered").val('0').prop('disabled', true);
             $("#changeDue").html('');
             $(".cashAndPos").removeClass('hidden');
         }
@@ -224,7 +224,7 @@ $(document).ready(function(){
              * hide "cash" an "pos" fields
              */
             $("#amountTenderedLabel").html("Amount Tendered");
-            $("#amountTendered").val('').prop('disabled', false);
+            $("#amountTendered").val('0').prop('disabled', false);
             $("#changeDue").html('');
             $(".cashAndPos").addClass('hidden');
         } 
@@ -285,7 +285,7 @@ $(document).ready(function(){
         var totalAmountTendered = parseFloat($("#posAmount").val()) + parseFloat($("#cashAmount").val());
         
         //set amount tendered as the value of "totalAmountTendered" and then trigger the change event on it
-        $("#amountTendered").val(isNaN(totalAmountTendered) ? "" : totalAmountTendered).change();
+        $("#amountTendered").val('0').change();
     });
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

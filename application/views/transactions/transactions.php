@@ -116,7 +116,7 @@ if(isset($items) && !empty($items)){
 
                                             <div id="amountTenderedDiv">
                                                 <label for="amountTendered" id="amountTenderedLabel">Amount Tendered</label>
-                                                <input type="text" class="form-control" id="amountTendered">
+                                                <input type="text" class="form-control" id="amountTendered" value="0">
                                                 <span class="help-block errMsg" id="amountTenderedErr"></span>
                                             </div>
                                         </div>
