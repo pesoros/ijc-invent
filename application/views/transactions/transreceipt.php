@@ -32,48 +32,10 @@ defined('BASEPATH') OR exit('');
     <?php foreach($allTransInfo as $get):?>
         <div class="row">
             <div class="col-xs-4"><?=$get['itemName'];?></div>
-            <div class="col-xs-4"><?=$get['quantity'] . "x" .number_format($get['unitPrice'], 2)?></div>
-            <div class="col-xs-4"><?=number_format($get['totalPrice'], 2)?></div>
+            <div class="col-xs-4"><?=$get['quantity'];?></div>
         </div>
         <?php $init_total += $get['totalPrice'];?>
-    <?php endforeach; ?>
-    <hr style='margin-top:2px; margin-bottom:0px'>       
-    <div class="row">
-        <div class="col-xs-12 text-right">
-            <b>Total: Rp.<?=isset($init_total) ? number_format($init_total, 2) : 0?></b>
-        </div>
-    </div>
-    <hr style='margin-top:2px; margin-bottom:0px'>      
-    <div class="row">
-        <div class="col-xs-12 text-right">
-            <b>Discount(<?=$discountPercentage?>%): Rp.<?=isset($discountAmount) ? number_format($discountAmount, 2) : 0?></b>
-        </div>
-    </div>       
-    <div class="row">
-        <div class="col-xs-12 text-right">
-            <?php if($vatPercentage > 0): ?>
-            <b>VAT(<?=$vatPercentage?>%): Rp.<?=isset($vatAmount) ? number_format($vatAmount, 2) : ""?></b>
-            <?php else: ?>
-            VAT inclusive
-            <?php endif; ?>
-        </div>
-    </div>      
-    <div class="row">
-        <div class="col-xs-12 text-right">
-            <b>FINAL TOTAL: Rp.<?=isset($cumAmount) ? number_format($cumAmount, 2) : ""?></b>
-        </div>
-    </div>
-    <hr style='margin-top:5px; margin-bottom:0px'>
-    <div class="row margin-top-5">
-        <div class="col-xs-12">
-            <b>Mode of Payment: <?=isset($_mop) ? str_replace("_", " ", $_mop) : ""?></b>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <b>Amount Tendered: Rp.<?=isset($amountTendered) ? number_format($amountTendered, 2) : ""?></b>
-        </div>
-    </div>
+    <?php endforeach; ?>  
     <hr style='margin-top:5px; margin-bottom:0px'>
     <div class="row margin-top-5">
         <div class="col-xs-12">
