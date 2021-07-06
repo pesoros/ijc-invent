@@ -25,7 +25,6 @@ defined('BASEPATH') OR exit('');
 	<div class="row" style='font-weight:bold'>
 		<div class="col-xs-4">Item</div>
 		<div class="col-xs-4">QtyxPrice</div>
-		<div class="col-xs-4">Tot(Rp.)</div>
 	</div>
 	<hr style='margin-top:2px; margin-bottom:0px'>
     <?php $init_total = 0; ?>
