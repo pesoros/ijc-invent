@@ -343,15 +343,15 @@ $(document).ready(function(){
         var custEmail = $("#custEmail").val();
         
         
-        if(isNaN(amountTendered) || (amountTendered === '0.00') || !modeOfPayment || (amountTendered < cumAmount)){
-            isNaN(amountTendered) || (amountTendered === '0.00') ? $("#amountTenderedErr").html("required") : $("#amountTenderedErr").html("");
-            !modeOfPayment ? $("#modeOfPaymentErr").html("Select mode of payment") : $("#modeOfPaymentErr").html("");
-            amountTendered < cumAmount ? $("#amountTenderedErr").html("Amount cannot be less than "+cumAmount) : "";
+        // if(isNaN(amountTendered) || (amountTendered === '0.00') || !modeOfPayment || (amountTendered < cumAmount)){
+        //     isNaN(amountTendered) || (amountTendered === '0.00') ? $("#amountTenderedErr").html("required") : $("#amountTenderedErr").html("");
+        //     !modeOfPayment ? $("#modeOfPaymentErr").html("Select mode of payment") : $("#modeOfPaymentErr").html("");
+        //     amountTendered < cumAmount ? $("#amountTenderedErr").html("Amount cannot be less than "+cumAmount) : "";
             
-            return;
-        }
+        //     return;
+        // }
         
-        else{
+        // else{
             //remove error messages if any
             changeInnerHTML(["amountTenderedErr", "modeOfPaymentErr"], "");
             
@@ -473,7 +473,6 @@ $(document).ready(function(){
             }).catch(function(){
                 console.log("Err");
             });
-        }
     });
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
