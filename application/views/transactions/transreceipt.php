@@ -23,14 +23,16 @@ defined('BASEPATH') OR exit('');
     </div>
     
 	<div class="row" style='font-weight:bold'>
-		<div class="col-xs-4">Item</div>
-		<div class="col-xs-4">QtyxPrice</div>
+		<div class="col-xs-2">Item code</div>
+		<div class="col-xs-6">Item Name</div>
+		<div class="col-xs-4">Qty</div>
 	</div>
 	<hr style='margin-top:2px; margin-bottom:0px'>
     <?php $init_total = 0; ?>
     <?php foreach($allTransInfo as $get):?>
         <div class="row">
-            <div class="col-xs-4"><?=$get['itemName'];?></div>
+            <div class="col-xs-2"><?=$get['itemCode'];?></div>
+            <div class="col-xs-6"><?=$get['itemName'];?></div>
             <div class="col-xs-4"><?=$get['quantity'];?></div>
         </div>
         <?php $init_total += $get['totalPrice'];?>
