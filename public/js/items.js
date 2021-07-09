@@ -210,7 +210,7 @@ $(document).ready(function(){
         var itemId = $(this).attr('id').split("-")[1];
         var itemDesc = $("#itemDesc-"+itemId).attr('title');
         var itemName = $("#itemName-"+itemId).html();
-        var itemPrice = $("#itemPrice-"+itemId).html().split(".")[0].replace(",", "");
+        var itemPrice = $("#itemPrice-"+itemId).html();
         var itemCode = $("#itemCode-"+itemId).html();
         
         //prefill form with info
@@ -238,14 +238,12 @@ $(document).ready(function(){
     
     $("#editItemSubmit").click(function(){
         var itemName = $("#itemNameEdit").val();
-        var itemPrice = $("#itemPriceEdit").val();
         var itemDesc = $("#itemDescriptionEdit").val();
         var itemId = $("#itemIdEdit").val();
         var itemCode = $("#itemCodeEdit").val();
         
-        if(!itemName || !itemPrice || !itemId){
+        if(!itemName || !itemId){
             !itemName ? $("#itemNameEditErr").html("Item name cannot be empty") : "";
-            !itemPrice ? $("#itemPriceEditErr").html("Item price cannot be empty") : "";
             !itemId ? $("#editItemFMsg").html("Unknown item") : "";
             return;
         }
@@ -255,7 +253,7 @@ $(document).ready(function(){
         $.ajax({
             method: "POST",
             url: appRoot+"items/edit",
-            data: {itemName:itemName, itemPrice:itemPrice, itemDesc:itemDesc, _iId:itemId, itemCode:itemCode}
+            data: {itemName:itemName, itemPrice:0, itemDesc:itemDesc, _iId:itemId, itemCode:itemCode}
         }).done(function(returnedData){
             if(returnedData.status === 1){
                 $("#editItemFMsg").css('color', 'green').html("Item successfully updated");
