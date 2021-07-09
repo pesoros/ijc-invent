@@ -216,8 +216,8 @@ class Item extends CI_Model{
     * @param type $itemDesc
     * @param type $itemPrice
     */
-   public function edit($itemId, $itemName, $itemDesc, $itemPrice){
-       $data = ['name'=>$itemName, 'unitPrice'=>$itemPrice, 'description'=>$itemDesc];
+   public function edit($itemId, $itemName, $itemDesc, $itemPrice, $itemCode){
+       $data = ['name'=>$itemName, 'unitPrice'=>$itemPrice, 'description'=>$itemDesc, 'code'=>$itemCode];
        
        $this->db->where('id', $itemId);
        $this->db->update('items', $data);

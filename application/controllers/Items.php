@@ -291,7 +291,7 @@ class Items extends CI_Controller{
             $itemCode = $this->input->post('itemCode', TRUE);
             
             //update item in db
-            $updated = $this->item->edit($itemId, $itemName, $itemDesc, $itemPrice);
+            $updated = $this->item->edit($itemId, $itemName, $itemDesc, $itemPrice, $itemCode);
             
             $json['status'] = $updated ? 1 : 0;
             
