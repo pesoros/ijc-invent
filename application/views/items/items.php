@@ -37,6 +37,8 @@ defined('BASEPATH') OR exit('');
                             <option value="name-DESC">Item Name (Z-A)</option>
                             <option value="code-DESC">Item Code (Descending)</option>
                             <option value="quantity-ASC">Quantity (lowest first)</option>
+                            <option value="lastUpdated-ASC">Last Update (lowest first)</option>
+                            <option value="lastUpdated-DESC">Last Update (Highest first)</option>
                         </select>
                     </div>
 
