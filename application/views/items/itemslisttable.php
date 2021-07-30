@@ -22,6 +22,7 @@
                         <th>CATEGORY</th>
                         <th>QTY IN STOCK</th>
                         <th>TOTAL SOLD</th>
+                        <th>LAST UPDATE</th>
                         <th>UPDATE QUANTITY</th>
                         <th>EDIT</th>
                         <th>DELETE</th>
@@ -44,6 +45,8 @@
                             <span id="itemQuantity-<?=$get->id?>"><?=$get->quantity?></span>
                         </td>
                         <td><?=$this->genmod->gettablecol('transactions', 'SUM(quantity)', 'itemCode', $get->code)?></td>
+
+                        <td><span id="lastUpdate-<?=$get->id?>"><?=$get->lastUpdated?></span></td>
                         
                         <td><a class="pointer updateStock" id="stock-<?=$get->id?>">Update Quantity</a></td>
                         <td class="text-center text-primary">
